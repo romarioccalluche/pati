@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0265d6, #1ca3f1); /* Gradiente de fondo */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+#container {
+    text-align: center;
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    width: 90%; /* Ajuste de ancho para móviles */
+}
+
+#message {
+    font-size: 24px; /* Reducido para pantallas móviles */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.button {
+    padding: 10px 20px; /* Reducción del padding */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    margin: 10px;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button.no {
+    background-color: #dc3545;
+}
+
+.button.no:hover {
+    background-color: #c82333;
+}
+
+#thanks-message {
+    display: none;
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.sticker {
+    width: 150px; /* Tamaño más pequeño para móviles */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Media queries para pantallas móviles */
+@media (max-width: 768px) {
+    #message {
+        font-size: 20px; /* Ajuste de tamaño de fuente en móviles */
+    }
+
+    .button {
+        padding: 8px 16px; /* Botones más pequeños */
+        font-size: 14px;
+    }
+
+    .sticker {
+        width: 100px; /* Tamaño más reducido para stickers */
+    }
+}
+
+@media (max-width: 480px) {
+    #message {
+        font-size: 18px; /* Ajuste aún más pequeño para pantallas pequeñas */
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .sticker {
+        width: 80px; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+}
